@@ -14,5 +14,5 @@ Kind regards,
 
 
 
-The I am WikiLeaks Team
+The WEDF Team
 {% endblocktrans %}
