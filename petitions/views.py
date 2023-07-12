@@ -20,11 +20,11 @@ logger = logging.getLogger(__name__)
 logging.basicConfig(format='%(asctime)s %(levelname)s: %(message)s')
 
 
-def index(request, lang):
+def index(request):
     # set language explicitly if we specify a language in URL
     available_languages = [code for (code, trans) in settings.LANGUAGES]
-    if lang is not None and lang in available_languages:
-        translation.activate(lang)
+    if request.LANGUAGE_CODE is not None and request.LANGUAGE_CODE in available_languages:
+        translation.activate(request.LANGUAGE_CODE)
         request.LANGUAGE_CODE = translation.get_language()
 
     petition = get_object_or_404(Petition, pk=1)
