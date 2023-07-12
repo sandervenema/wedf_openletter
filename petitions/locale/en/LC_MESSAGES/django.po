@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: wedf_openletter 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-19 14:04+0000\n"
+"POT-Creation-Date: 2023-07-12 19:43+0200\n"
 "PO-Revision-Date: 2017-05-03 16:55+0100\n"
 "Last-Translator: Sander Venema <sander@sandervenema.ch>\n"
 "Language-Team: de\n"
@@ -18,51 +18,31 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n==1 ? 0 : 1;\n"
 "X-Generator: Poedit 1.5.4\n"
 
-#: wedf_openletter/settings.py:172
-msgid "German"
-msgstr ""
-
-#: wedf_openletter/settings.py:173
-msgid "English"
-msgstr ""
-
-#: wedf_openletter/settings.py:174
-msgid "Spanish"
-msgstr ""
-
-#: wedf_openletter/settings.py:175
-msgid "French"
-msgstr ""
-
-#: wedf_openletter/settings.py:176
-msgid "Swedish"
-msgstr ""
-
-#: petitions/forms.py:16
+#: forms.py:17
 msgid "You can only submit the petition once!"
 msgstr ""
 
-#: petitions/forms.py:21
+#: forms.py:22
 msgid "Your name"
 msgstr ""
 
-#: petitions/forms.py:24
+#: forms.py:25
 msgid "Your affiliation"
 msgstr ""
 
-#: petitions/forms.py:27
+#: forms.py:28
 msgid "Your e-mail address"
 msgstr ""
 
-#: petitions/templates/404.html:4
+#: templates/404.html:4
 msgid "Page not found!"
 msgstr ""
 
-#: petitions/templates/404.html:11
+#: templates/404.html:11
 msgid "The page you were looking for cannot be found."
 msgstr ""
 
-#: petitions/templates/petitions/confirmation_mail.txt:3
+#: templates/petitions/confirmation_mail.txt:3
 #, python-format
 msgid ""
 "\n"
@@ -79,49 +59,39 @@ msgid ""
 "\n"
 "\n"
 "\n"
-"The I am WikiLeaks Team\n"
+"The WEDF Team\n"
 msgstr ""
 
-#: petitions/templates/petitions/confirmed.html:4
-#: petitions/templates/petitions/thankyou.html:4
-#: petitions/templates/petitions/thankyou.html:9
+#: templates/petitions/confirmed.html:4 templates/petitions/thankyou.html:4
+#: templates/petitions/thankyou.html:9
 msgid "Thank you!"
 msgstr ""
 
-#: petitions/templates/petitions/confirmed.html:9
+#: templates/petitions/confirmed.html:9
 msgid "Confirmed!"
 msgstr ""
 
-#: petitions/templates/petitions/confirmed.html:11
+#: templates/petitions/confirmed.html:11
 msgid "Your signature was successfully processed. Thank you for your support."
 msgstr ""
 
-#: petitions/templates/petitions/confirmed.html:13
-#: petitions/templates/petitions/thankyou.html:33
+#: templates/petitions/confirmed.html:13 templates/petitions/thankyou.html:33
 msgid "Back to the petition"
 msgstr ""
 
-#: petitions/templates/petitions/index.html:4
-msgid "Sign the I am WikiLeaks open letter!"
+#: templates/petitions/index.html:4
+msgid "Sign the open letter!"
 msgstr ""
 
-#: petitions/templates/petitions/index.html:29
-msgid "our network"
-msgstr ""
-
-#: petitions/templates/petitions/index.html:60
-msgid "Donate Now!"
-msgstr ""
-
-#: petitions/templates/petitions/index.html:66
+#: templates/petitions/index.html:28
 msgid "Open Letter to President Trump:"
 msgstr ""
 
-#: petitions/templates/petitions/index.html:68
+#: templates/petitions/index.html:30
 msgid "Dear President Trump,"
 msgstr ""
 
-#: petitions/templates/petitions/index.html:70
+#: templates/petitions/index.html:32
 msgid ""
 "We are journalists, activists and citizens from the United States and\n"
 "            around the world who care about press freedom and are writing to "
@@ -137,7 +107,7 @@ msgid ""
 "            planning."
 msgstr ""
 
-#: petitions/templates/petitions/index.html:78
+#: templates/petitions/index.html:40
 msgid ""
 "This threat to WikiLeaks escalates a long-running war of attrition\n"
 "            against the great virtue of the United States &mdash; free "
@@ -161,7 +131,7 @@ msgid ""
 "            Justice."
 msgstr ""
 
-#: petitions/templates/petitions/index.html:90
+#: templates/petitions/index.html:52
 msgid ""
 "A threat to WikiLeaks' work &mdash; which is publishing information "
 "protected\n"
@@ -172,7 +142,7 @@ msgid ""
 "            journalism can be criminalised."
 msgstr ""
 
-#: petitions/templates/petitions/index.html:95
+#: templates/petitions/index.html:57
 msgid ""
 "We call on you as President of the United States to close the Grand Jury\n"
 "            investigation into WikiLeaks and drop any charges planned "
@@ -189,27 +159,23 @@ msgid ""
 "            darkness."
 msgstr ""
 
-#: petitions/templates/petitions/index.html:107
-msgid "Initial signatures:"
-msgstr ""
-
-#: petitions/templates/petitions/index.html:130
+#: templates/petitions/index.html:69
 msgid "Signatures:"
 msgstr ""
 
-#: petitions/templates/petitions/index.html:152
+#: templates/petitions/index.html:91
 msgid "Add Your Name!"
 msgstr ""
 
-#: petitions/templates/petitions/index.html:153
+#: templates/petitions/index.html:92
 msgid "Number of new signatures since launch:"
 msgstr ""
 
-#: petitions/templates/petitions/index.html:159
+#: templates/petitions/index.html:98
 msgid "Add!"
 msgstr ""
 
-#: petitions/templates/petitions/index.html:162
+#: templates/petitions/index.html:101
 msgid ""
 "\n"
 "            Your e-mail address will not be stored by the system, and\n"
@@ -218,7 +184,7 @@ msgid ""
 "            "
 msgstr ""
 
-#: petitions/templates/petitions/thankyou.html:12
+#: templates/petitions/thankyou.html:12
 msgid ""
 "\n"
 "                E-mail failed to send, please confirm your signature by "
@@ -226,20 +192,20 @@ msgid ""
 "                "
 msgstr ""
 
-#: petitions/templates/petitions/thankyou.html:15
+#: templates/petitions/thankyou.html:15
 msgid "Confirm"
 msgstr ""
 
-#: petitions/templates/petitions/thankyou.html:17
+#: templates/petitions/thankyou.html:17
 msgid ""
 "An e-mail with a confirmation link has been sent to your e-mail address to "
 "confirm your signature."
 msgstr ""
 
-#: petitions/templates/petitions/thankyou.html:19
+#: templates/petitions/thankyou.html:19
 msgid "If you don't get a confirmation e-mail, please check your spam folder."
 msgstr ""
 
-#: petitions/views.py:67
-msgid "I am WikiLeaks: Confirm your signature"
+#: views.py:69
+msgid "WEDF: Confirm your signature"
 msgstr ""
