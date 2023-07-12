@@ -26,6 +26,6 @@ class SignatureAdmin(admin.ModelAdmin):
 
 
 
-admin.site.site_title = 'IamWL Backend'
-admin.site.site_header = 'IamWL Backend'
+admin.site.site_title = 'WEDF Open Letter Backend'
+admin.site.site_header = 'WEDF Open Letter Backend'
 admin.site.site_url = None
