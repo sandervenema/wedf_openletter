@@ -88,7 +88,10 @@
         </div>
 
         <div class="small-12 medium-4 column panel">
-            <h2>{% trans "Add Your Name!" %}</h2>
+            <h2>{% trans "Join the fight for more ethical AI!" %}</h2>
+
+            <p>{% trans "This is version 1 of the perennial task of collecting best practices for AI. If you think this is a good starting place, show your support by adding your signature:" %}</p>
+
             <p>{% trans "Number of new signatures since launch:" %} <strong>{{ petition.signatures }}</strong></p>
 
             <form action="{% url 'sign' %}" method="post">

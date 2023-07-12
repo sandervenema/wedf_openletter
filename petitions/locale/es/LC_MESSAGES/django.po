@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: wedf_openletter 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-12 19:53+0200\n"
+"POT-Creation-Date: 2023-07-12 20:11+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: es\n"
@@ -90,7 +90,7 @@ msgstr "&iexcl;Confirmado"
 msgid "Your signature was successfully processed. Thank you for your support."
 msgstr "Su firma ha sido procesada. Gracias por su apoyo."
 
-#: templates/petitions/confirmed.html:13 templates/petitions/thankyou.html:33
+#: templates/petitions/confirmed.html:25 templates/petitions/thankyou.html:34
 msgid "Back to the petition"
 msgstr "Volver a la petici&oacute;n"
 
@@ -209,19 +209,28 @@ msgid "Signatures:"
 msgstr "Firmantes:"
 
 #: templates/petitions/index.html:91
-msgid "Add Your Name!"
-msgstr "&iexcl;A&ntilde;ada su nombre!"
+msgid "Join the fight for more ethical AI!"
+msgstr "¡Únete a la lucha por una IA más ética!"
 
-#: templates/petitions/index.html:92
+#: templates/petitions/index.html:93
+msgid ""
+"This is version 1 of the perennial task of collecting best practices for AI. "
+"If you think this is a good starting place, show your support by adding your "
+"signature:"
+msgstr ""
+"Esta es la versión 1 de la eterna tarea de recopilar las mejores prácticas para la IA. "
+"Si crees que es un buen punto de partida, muestra tu apoyo añadiendo tu firma:"
+
+#: templates/petitions/index.html:95
 msgid "Number of new signatures since launch:"
 msgstr ""
 "N&uacute;mero de nuevos firmantes desde el inicio de la campa&ntilde;a:"
 
-#: templates/petitions/index.html:98
+#: templates/petitions/index.html:101
 msgid "Add!"
 msgstr "&iexcl;Añada!"
 
-#: templates/petitions/index.html:101
+#: templates/petitions/index.html:104
 msgid ""
 "\n"
 "            Your e-mail address will not be stored by the system, and\n"
@@ -270,6 +279,9 @@ msgstr ""
 #: views.py:69
 msgid "WEDF: Confirm your signature"
 msgstr "WEDF: Confirme su firma"
+
+#~ msgid "Add Your Name!"
+#~ msgstr "&iexcl;A&ntilde;ada su nombre!"
 
 #~ msgid "German"
 #~ msgstr "Alem&aacute;n"
