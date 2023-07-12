@@ -5,7 +5,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: iamwikileaks 1.0\n"
+"Project-Id-Version: wedf_openletter 1.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-19 14:04+0000\n"
 "PO-Revision-Date: 2017-05-03 16:55+0100\n"
@@ -18,23 +18,23 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n==1 ? 0 : 1;\n"
 "X-Generator: Poedit 1.5.4\n"
 
-#: netzpolitik/settings.py:172
+#: wedf_openletter/settings.py:172
 msgid "German"
 msgstr ""
 
-#: netzpolitik/settings.py:173
+#: wedf_openletter/settings.py:173
 msgid "English"
 msgstr ""
 
-#: netzpolitik/settings.py:174
+#: wedf_openletter/settings.py:174
 msgid "Spanish"
 msgstr ""
 
-#: netzpolitik/settings.py:175
+#: wedf_openletter/settings.py:175
 msgid "French"
 msgstr ""
 
-#: netzpolitik/settings.py:176
+#: wedf_openletter/settings.py:176
 msgid "Swedish"
 msgstr ""
 

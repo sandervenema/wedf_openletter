@@ -1,10 +1,10 @@
-# Netzpolitik.us petition code
+# WEDF open letter petition code
 
-This is the petition code used to run the site Netzpolitik.us. The code is written in Python 3, based on the [Django](https://www.djangoproject.com/) web framework. I use a sqlite3 database to store the signatures. By default this gets stored as `db.sqlite3` in the application root. This can be adjusted by modifying the `netzpolitik/settings.py` file.
+This is the petition code used to run on the WEDF site. The code is written in Python 3, based on the [Django](https://www.djangoproject.com/) web framework. I use a sqlite3 database to store the signatures. By default this gets stored as `db.sqlite3` in the application root. This can be adjusted by modifying the `wedf_openletter/settings.py` file.
 
 ## Deployment
 
-For deployment I used [uwgsi](https://uwsgi-docs.readthedocs.org/en/latest/WSGIquickstart.html) to run the Python code. I installed Django in a Python 3 virtualenv, and set the `home` setting in the `netzpolitik_uwsgi.ini` file to the path of this virtualenv (so that it uwsgi can find Django). I started 10 uwsgi workers on a socket, and then hooked up nginx to act as a proxy for the requests. All static files are being served by nginx as well (under the `/static` url). The wsgi configuration files are included in the root of this repository.
+For deployment I used [uwgsi](https://uwsgi-docs.readthedocs.org/en/latest/WSGIquickstart.html) to run the Python code. I installed Django in a Python 3 virtualenv, and set the `home` setting in the `wedf_openletter_uwsgi.ini` file to the path of this virtualenv (so that it uwsgi can find Django). I started 10 uwsgi workers on a socket, and then hooked up nginx to act as a proxy for the requests. All static files are being served by nginx as well (under the `/static` url). The wsgi configuration files are included in the root of this repository.
 
 ### Required installed packages
 
@@ -22,11 +22,11 @@ Install these using `apt-get`, or any other package manager that your distro use
 ### Clone & Setting up virtualenv
 
 ```
-git clone https://github.com/sandervenema/netzpolitik
-cd netzpolitik
-virtualenv -p /usr/bin/python3 venv
+git clone https://github.com/sandervenema/wedf_openletter
+cd wedf_openletter
+python -m venv venv
 source venv/bin/activate
-pip install --upgrade pip
+python -m pip install --upgrade pip
 pip install -r requirements.txt
 ./manage.py migrate
 ./manage.py createsuperuser
@@ -38,12 +38,12 @@ You should be able to deactivate the virtualenv after installing the required pa
 
 ### Setting up uwsgi
 
-**Make sure you edit the `netzpolitik_uwsgi.ini` file to correct the paths!**
+**Make sure you edit the `wedf_openletter_uwsgi.ini` file to correct the paths!**
 
 After editing the ini file, first check whether uwsgi works by executing:
 
 ```
-uwsgi netzpolitik_uwsgi.ini
+uwsgi wedf_openletter_uwsgi.ini
 ```
 
 This should start 10 workers and the socket should now be created under /tmp. Check the log file to make sure. See **Basic nginx configuration** later in this README to see how to hook nginx up to this. Press `CTRL-C` to exit and kill the workers.
@@ -59,12 +59,12 @@ uid = www-data
 gid = www-data
 ```
 
-Then we're going to create the vassals directory, and symlink our `netzpolik_uwsgi.ini` script in this repository to that location:
+Then we're going to create the vassals directory, and symlink our `wedf_openletter_uwsgi.ini` script in this repository to that location:
 
 ```
 mkdir /etc/uwsgi/vassals
 cd /etc/uwsgi/vassals
-ln -s /path/to/this/repository/netzpolitik_uwsgi.ini netzpolitik_uwsgi.ini
+ln -s /path/to/this/repository/wedf_openletter_uwsgi.ini wedf_openletter_uwsgi.ini
 ```
 
 So now when we will start uwsgi in emperor mode, it will know of our application. Go ahead and try it now by executing `uwsgi /etc/uwsgi/emperor.ini`. It should find the vassal and start the 10 workers again.
@@ -72,15 +72,15 @@ So now when we will start uwsgi in emperor mode, it will know of our application
 If you're getting permission denied errors, it's most likely because the log file cannot be created (because you run as www-data). In that case, fix permissions, or create the logfile in advance and fix permissions:
 
 ```
-touch /var/log/netzpolitik.log
-chown www-data:www-data /var/log/netzpolik.log
-chmod 755 /var/log/netzpolitik.log
+touch /var/log/wedf_openletter.log
+chown www-data:www-data /var/log/wedf_openletter.log
+chmod 755 /var/log/wedf_openletter.log
 ```
 
 Also make sure the files in the repo directory is owned by the same user, so it can write to the database etc.:
 
 ```
-chown -R www-data:www-data /path/to/netzpolik/git/working/directory
+chown -R www-data:www-data /path/to/wedf_openletter/git/working/directory
 ```
 
 Once that's working, we need to create a systemd service file. Create a file at `/etc/systemd/system/emperor.uwsgi.service` and put the following into it:
@@ -130,13 +130,13 @@ For nginx I used a basic config like the one below. I stripped a few non-relevan
 
 ```
 upstream django {
-  server unix:///tmp/netzpolitik.sock;
+  server unix:///tmp/wedf_openletter.sock;
 }
 
 server {
    listen 80;
    listen 443 ssl spdy;
-   server_name netzpolitik.us www.netzpolitik.us;
+   server_name wedf_openletter.tld www.wedf_openletter.tld;
    
    # ssl settings here...
    
