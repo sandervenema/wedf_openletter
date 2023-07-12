@@ -1,4 +1,5 @@
 ;(function ($) {
+    $("#accordion").accordion();
     
     // Language switcher logic
     $('ul.languages > li > a').on('click', function click_language(evt) {
