@@ -66,9 +66,9 @@ def sign(request):
                 urlconf=None, args=[hash_val]))
 
             # Make a confirmation message
-            subject = _('I am WikiLeaks: Confirm your signature')
+            subject = _('WEDF Open Letter: Confirm your signature')
             to_addr = [email]
-            from_addr = 'no-reply@iamwikileaks.org'
+            from_addr = 'no-reply@worldethicaldata.org'
             message_templ = loader.get_template('petitions/confirmation_mail.txt')
             message = message_templ.render({'link': link, 'name': name})
 
