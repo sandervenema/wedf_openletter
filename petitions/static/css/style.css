@@ -51,6 +51,9 @@
     font-display:swap
 }
 
+.row { max-width: 90em; }
+.column { padding-left: 2em; padding-right: 2em; }
+
 /* colour placeholder */
 ::-webkit-input-placeholder { color: #333; }
 :-moz-placeholder { color: #333; }
@@ -69,20 +72,24 @@ a { color: #192850; }
 a:hover { color: #3a5bb1; }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: sans-serif;
-    font-weight: normal;
+    font-family: "Karbon", sans-serif;
+    font-weight: 600;
+    color: #1ad3af;
 }
 
+ul, li,
 p {
     color: rgb(51, 51, 51);
     font-family: "Karbon", sans-serif;
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 400;
-    line-height: 32px;
+    line-height: 28px;
     margin-bottom: 32px;
     margin-top: 0px;
     text-align: left
 }
+
+li { margin-bottom: 0; }
 
 p.signame {
     font-weight: bold;
@@ -122,8 +129,29 @@ form {
     margin: 0;
 }
 
-.button { background-color: #3a5bb1 !important; }
-.button:hover { background-color: #192850 !important; }
+.button { 
+    background-color: #1ad3af !important;
+    font-family: "Karbon", sans-serif;
+    font-weight: 600;
+    font-size: 1rem; 
+}
+.button:hover { filter: brightness(90%); }
+
+.ui-state-active {
+    border: 1px solid #1ad3af;
+    background-color: #1ad3af;
+}
+
+.ui-accordion .ui-accordion-header,
+input {
+    font-family: "Karbon", sans-serif;
+    font-weight: 400;
+    font-size: 1.5rem; 
+}
+
+.ui-accordion .ui-accordion-header {
+    font-weight: 600;
+}
 
 .social {
     margin-bottom: 10px !important;
