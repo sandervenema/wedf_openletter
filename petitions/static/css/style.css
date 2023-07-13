@@ -77,6 +77,11 @@ h1, h2, h3, h4, h5, h6 {
     color: #1ad3af;
 }
 
+.panel {
+    position: sticky;
+    top: 30px;
+}
+
 ul, li,
 p {
     color: rgb(51, 51, 51);
