@@ -1,3 +1,56 @@
+@font-face {
+    font-family:"Karbon";
+    font-display:auto;
+    src:url(../fonts/light.eot);
+    src:url(../fonts/light.eot?#iefix) format("embedded-opentype"),
+    url(../fonts/light.woff2) format("woff2"),
+    url(../fonts/light.woff) format("woff"),
+    url(../fonts/light.ttf) format("truetype"),
+    url(../fonts/light.svg#Karbon) format("svg");
+    font-weight:300;
+    font-style:normal;
+    font-display:swap
+}
+@font-face {
+    font-family:"Karbon";
+    font-display:auto;
+    src:url(../fonts/regular.eot);
+    src:url(../fonts/regular.eot?#iefix) format("embedded-opentype"),
+    url(../fonts/regular.woff2) format("woff2"),
+    url(../fonts/regular.woff) format("woff"),
+    url(../fonts/regular.ttf) format("truetype"),
+    url(../fonts/regular.svg#Karbon) format("svg");
+    font-weight:400;
+    font-style:normal;
+    font-display:swap
+}
+@font-face {
+    font-family:"Karbon";
+    font-display:auto;
+    src:url(../fonts/medium.eot);
+    src:url(../fonts/medium.eot?#iefix) format("embedded-opentype"),
+    url(../fonts/medium.woff2) format("woff2"),
+    url(../fonts/medium.woff) format("woff"),
+    url(../fonts/medium.ttf) format("truetype"),
+    url(../fonts/medium.svg#Karbon) format("svg");
+    font-weight:500;
+    font-style:normal;
+    font-display:swap
+}
+@font-face {
+    font-family:"Karbon";
+    font-display:auto;
+    src:url(../fonts/semibold.eot);
+    src:url(../fonts/semibold.eot?#iefix) format("embedded-opentype"),
+    url(../fonts/semibold.woff2) format("woff2"),
+    url(../fonts/semibold.woff) format("woff"),
+    url(../fonts/semibold.ttf) format("truetype"),
+    url(../fonts/semibold.svg#Karbon) format("svg");
+    font-weight:600;
+    font-style:normal;
+    font-display:swap
+}
+
 /* colour placeholder */
 ::-webkit-input-placeholder { color: #333; }
 :-moz-placeholder { color: #333; }
@@ -21,8 +74,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 p {
-    font-family: sans-serif;
-    line-height: 1.4;
+    color: rgb(51, 51, 51);
+    font-family: "Karbon", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 32px;
+    margin-bottom: 32px;
+    margin-top: 0px;
+    text-align: left
 }
 
 p.signame {
@@ -157,6 +216,6 @@ a#cta_donate_button {
     background: -o-linear-gradient(top, #7fb726 0%,#6aa823 100%);
     background: -ms-linear-gradient(top, #7fb726 0%,#6aa823 100%);
     background: linear-gradient(to bottom, #7fb726 0%,#6aa823 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7fb726', endColorstr='#6aa823',GradientType=0 
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7fb726', endColorstr='#6aa823',GradientType=0 );
 }
 
