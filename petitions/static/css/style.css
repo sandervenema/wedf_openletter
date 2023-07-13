@@ -68,8 +68,8 @@ form#language_form {
     display: none !important;
 }
 
-a { color: #192850; }
-a:hover { color: #3a5bb1; }
+a { color: #16a488; text-decoration: underline; }
+a:hover { filter: brightness(90%); }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: "Karbon", sans-serif;
