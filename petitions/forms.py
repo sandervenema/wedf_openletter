@@ -19,7 +19,7 @@ def validate_duplicate_email(email):
 
 class PetitionForm(forms.Form):
     name = forms.CharField(label='', 
-                           widget=forms.TextInput(attrs={'placeholder': _('Your name')}), 
+                           widget=forms.TextInput(attrs={'placeholder': _('Your name *')}), 
                            max_length=200)
     job_title = forms.CharField(label='',
                            widget=forms.TextInput(attrs={'placeholder': _('Your title')}), 
@@ -28,7 +28,7 @@ class PetitionForm(forms.Form):
                            widget=forms.TextInput(attrs={'placeholder': _('Your affiliation')}), 
                            max_length=200, required=False)
     email = forms.EmailField(label='', 
-                           widget=forms.TextInput(attrs={'placeholder': _('Your e-mail address')}),
+                           widget=forms.TextInput(attrs={'placeholder': _('Your e-mail address *')}),
                            validators=[validate_duplicate_email])
 
 

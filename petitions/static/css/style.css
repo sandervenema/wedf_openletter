@@ -96,6 +96,8 @@ p {
     text-align: left
 }
 
+.notice p { margin-bottom: 10px; }
+
 li { margin-bottom: 0; }
 
 p.signame {
