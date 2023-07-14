@@ -204,7 +204,7 @@
                     {% endif %}
 
                     <div class="small-12 medium-6 column">
-                        <p class="signame">{{ sig.name }}<br><span class="affil">{{ sig.affiliation }}</span></p>
+                        <p class="signame">{{ sig.name }}<br><span class="affil">{% if sig.job_title %}{{ sig.job_title }} - {% endif %}{{ sig.affiliation }}</span></p>
                     </div>
 
                     {% if forloop.counter|divisibleby:2 %}

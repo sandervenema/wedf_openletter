@@ -16,12 +16,12 @@ make_active.short_description = "Confirm selected signatures"
 
 @admin.register(Signature)
 class SignatureAdmin(admin.ModelAdmin):
-    fields = ('name', 'affiliation', 'petition', 'active', 'initial',
+    fields = ('name', 'job_title', 'affiliation', 'petition', 'active', 'initial',
             'timestamp')
-    list_display = ('name', 'affiliation', 'petition', 'active', 'initial',
+    list_display = ('name', 'job_title', 'affiliation', 'petition', 'active', 'initial',
             'timestamp')
     list_filter = ('active', 'initial')
-    search_fields = ['name', 'affiliation', 'email']
+    search_fields = ['name', 'job_title', 'affiliation', 'email']
     actions = [make_active]
 
 

@@ -21,6 +21,9 @@ class PetitionForm(forms.Form):
     name = forms.CharField(label='', 
                            widget=forms.TextInput(attrs={'placeholder': _('Your name')}), 
                            max_length=200)
+    job_title = forms.CharField(label='',
+                           widget=forms.TextInput(attrs={'placeholder': _('Your title')}), 
+                           max_length=200, required=False)
     affiliation = forms.CharField(label='',
                            widget=forms.TextInput(attrs={'placeholder': _('Your affiliation')}), 
                            max_length=200, required=False)

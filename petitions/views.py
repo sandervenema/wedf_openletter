@@ -52,13 +52,14 @@ def sign(request):
             email = form.cleaned_data['email']
             name = form.cleaned_data['name']
             affil = form.cleaned_data['affiliation']
+            job_title = form.cleaned_data['job_title']
             timestamp = time.time()
             hash_val = hashlib.sha256(' '.join([email, name, 
                 affil, str(timestamp)]).encode('utf-8')).hexdigest()
 
             # Add values to db
             s = Signature(email=hashlib.sha256(email.encode()).hexdigest(),
-                    name=name, affiliation=affil, petition=petition, link=hash_val)
+                    name=name, job_title=job_title, affiliation=affil, petition=petition, link=hash_val)
             s.save()
 
             # Generate confirmation url
