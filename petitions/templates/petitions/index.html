@@ -17,11 +17,13 @@
         </select>
     </form>
 
-    <ul class="languages">
-    {% for language in languages %}
-        <li><a href="#" data-language-code="{{ language.code }}"><img src="/static/images/flags/{{ language.code }}.png"> {{ language.name_local }}</a></li>
-    {% endfor %}
-    </ul>
+    <div class="row language-switcher">
+        <ul class="languages">
+        {% for language in languages %}
+            <li><a href="#" data-language-code="{{ language.code }}"><img src="/static/images/flags/{{ language.code }}.png"> {{ language.name_local }}</a></li>
+        {% endfor %}
+        </ul>
+    </div>
 
     <div class="row header">
         <div class="small-12 medium-8 column logo">

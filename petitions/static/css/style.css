@@ -117,10 +117,14 @@ ul.errorlist li {
     color: red; 
 }
 
+.language-switcher {
+    position: relative;
+}
+
 ul.languages {
     list-style: none;
     position: absolute;
-    right: 126px;
+    right: 0px;
     top: -57px;
 }
 ul.languages li {
