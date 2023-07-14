@@ -1,5 +1,7 @@
 ;(function ($) {
-    $("#accordion").accordion();
+    $("#accordion").accordion({
+        collapsible: true
+      });
     
     // Language switcher logic
     $('ul.languages > li > a').on('click', function click_language(evt) {
