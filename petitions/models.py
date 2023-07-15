@@ -22,6 +22,7 @@ class Signature(models.Model):
     active = models.BooleanField(default=False)
     initial = models.BooleanField(default=False)
     timestamp = models.DateTimeField(default=timezone.now)
+    order = models.IntegerField(default=1, null=False)
 
     def __str__(self):
         return self.name
