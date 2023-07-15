@@ -28,7 +28,7 @@ class Signature(models.Model):
 
 
 class Suggestion(models.Model):
-    suggestion = models.TextField()
+    suggestion = models.TextField(max_length=10000)
     name = models.CharField(max_length=200)
     affiliation = models.CharField(max_length=200, null=True)
     job_title = models.CharField(max_length=200, null=True)
