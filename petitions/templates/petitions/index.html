@@ -205,39 +205,21 @@
                 <h4>{% trans "Signatures:" %}</h4>
 
                 {% for sig in initial_signatures %}
-                    {% if forloop.counter0|divisibleby:2 %}
-                        <div class="row">
-                    {% endif %}
-
-                    <div class="small-12 medium-6 column">
-                        <p class="signame">{{ sig.name }}<br><span class="affil">{% if sig.job_title %}{{ sig.job_title }} - {% endif %}{{ sig.affiliation }}</span></p>
+                    <div class="row">
+                        <div class="small-12 column">
+                            <p class="signame">{{ sig.name }}<br><span class="affil">{% if sig.job_title %}{{ sig.job_title }} - {% endif %}{{ sig.affiliation }}</span></p>
+                        </div>
                     </div>
-
-                    {% if forloop.counter|divisibleby:2 %}
-                        </div>
-                    {% endif %}
-                    {% if forloop.last and forloop.counter0|divisibleby:2 %}
-                        </div>
-                    {% endif %}
                 {% endfor %}
             </div>
 
             <div class="signatures">
                 {% for sig in signatures %}
-                    {% if forloop.counter0|divisibleby:2 %}
-                        <div class="row">
-                    {% endif %}
-
-                    <div class="small-12 medium-6 column">
-                        <p class="signame">{{ sig.name }}<br><span class="affil">{% if sig.job_title %}{{ sig.job_title }} - {% endif %}{{ sig.affiliation }}</span></p>
+                    <div class="row">
+                        <div class="small-12 column">
+                            <p class="signame">{{ sig.name }}<br><span class="affil">{% if sig.job_title %}{{ sig.job_title }} - {% endif %}{{ sig.affiliation }}</span></p>
+                        </div>
                     </div>
-
-                    {% if forloop.counter|divisibleby:2 %}
-                        </div>
-                    {% endif %}
-                    {% if forloop.last and forloop.counter0|divisibleby:2 %}
-                        </div>
-                    {% endif %}
                 {% endfor %}
             </div>
         </div>
