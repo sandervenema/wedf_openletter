@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from petitions.models import Petition, Signature
+from petitions.models import Petition, Signature, Suggestion
 
 
 @admin.register(Petition)
@@ -24,6 +24,12 @@ class SignatureAdmin(admin.ModelAdmin):
     search_fields = ['name', 'job_title', 'affiliation', 'email']
     actions = [make_active]
 
+
+@admin.register(Suggestion)
+class SuggestionAdmin(admin.ModelAdmin):
+    fields = ('name', 'job_title', 'affiliation', 'petition', 'suggestion', 'timestamp')
+    list_display = ('name', 'job_title', 'affiliation', 'petition', 'suggestion', 'timestamp')
+    search_fields = ['name', 'job_title', 'affiliation', 'suggestion']
 
 
 admin.site.site_title = 'WEDF Open Letter Backend'
