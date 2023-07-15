@@ -5,6 +5,8 @@ from django.core.validators import EmailValidator
 from django.core.exceptions import ValidationError
 from django.utils.translation import gettext_lazy as _
 
+from hcaptcha.fields import hCaptchaField
+
 
 from .models import Signature, Suggestion
 
@@ -44,3 +46,4 @@ class SuggestionForm(forms.Form):
     affiliation = forms.CharField(label='',
                            widget=forms.TextInput(attrs={'placeholder': _('Your affiliation')}), 
                            max_length=200, required=False)
+    hcaptcha = hCaptchaField(label='')
