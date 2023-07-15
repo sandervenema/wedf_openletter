@@ -26,3 +26,14 @@ class Signature(models.Model):
     def __str__(self):
         return self.name
 
+
+class Suggestion(models.Model):
+    suggestion = models.TextField()
+    name = models.CharField(max_length=200)
+    affiliation = models.CharField(max_length=200, null=True)
+    job_title = models.CharField(max_length=200, null=True)
+    petition = models.ForeignKey(Petition, models.CASCADE)
+    timestamp = models.DateTimeField(default=timezone.now)
+
+    def __str__(self):
+        return self.name

@@ -1,0 +1,16 @@
+{% extends "petitions/layout.html" %}
+{% load i18n %}
+
+{% block title %}{% trans "Thank you!" %}{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div class="small-12 column">
+            <h1>{% trans "Thank you!" %}</h1>
+
+            <p>{% trans "Thank you for your suggestion." %}</p>
+
+            <p><a href="/en/openletter/">{% trans "Back to the open letter" %}</a></p>
+        </div>
+    </div>
+{% endblock %}

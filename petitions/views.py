@@ -11,8 +11,8 @@ import time
 import logging
 from smtplib import SMTPException
 
-from .models import Petition, Signature
-from .forms import PetitionForm
+from .models import Petition, Signature, Suggestion
+from .forms import PetitionForm, SuggestionForm
 
 
 # get logging instance and set formatter
@@ -33,12 +33,14 @@ def index(request):
     active_signatures = petition.signature_set.filter(active=True,
             initial=False).order_by('-timestamp')
     form = PetitionForm()
+    suggestion_form = SuggestionForm()
 
     return render(request, 'petitions/index.html', {
         'petition': petition, 
         'signatures': active_signatures,
         'initial_signatures': initial_signatures,
-        'form': form}) 
+        'form': form,
+        'suggestion_form': suggestion_form}) 
 
 
 def sign(request):
@@ -92,12 +94,14 @@ def sign(request):
                     initial=True).order_by('name')
             active_signatures = petition.signature_set.filter(active=True,
                     initial=False).order_by('-timestamp')
+            suggestion_form = SuggestionForm()
 
             return render(request, 'petitions/index.html', {
                 'petition': petition, 
                 'signatures': active_signatures,
                 'initial_signatures': initial_signatures,
-                'form': form}) 
+                'form': form,
+                'suggestion_form': suggestion_form}) 
     else:
         # redirect to index
         return redirect('index')
@@ -112,3 +116,42 @@ def confirm(request, link):
 
     # Display thank you message + confirm message
     return render(request, 'petitions/confirmed.html')
+
+
+# Make a suggestion
+def suggest(request):
+    petition = get_object_or_404(Petition, pk=1)
+
+    if request.method == 'POST':
+        form = SuggestionForm(request.POST)
+
+        if form.is_valid():
+            # Get values from form
+            suggestion = form.cleaned_data['suggestion']
+            name = form.cleaned_data['name']
+            affil = form.cleaned_data['affiliation']
+            job_title = form.cleaned_data['job_title']
+
+            # Add values to db
+            s = Suggestion(suggestion=suggestion,
+                    name=name, job_title=job_title, affiliation=affil, petition=petition)
+            s.save()
+
+            # Display thank you message
+            return render(request, 'petitions/thankyou-suggestion.html')
+        else:
+            initial_signatures = petition.signature_set.filter(active=True,
+                    initial=True).order_by('name')
+            active_signatures = petition.signature_set.filter(active=True,
+                    initial=False).order_by('-timestamp')
+            petition_form = PetitionForm()
+
+            return render(request, 'petitions/index.html', {
+                'petition': petition, 
+                'signatures': active_signatures,
+                'initial_signatures': initial_signatures,
+                'form': petition_form,
+                'suggestion_form': form}) 
+    else:
+        # redirect to index
+        return redirect('index')

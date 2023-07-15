@@ -266,5 +266,22 @@
                 {% endblocktrans %}</small></p>
             </div>
         </div>
+
+        <div class="small-12 medium-4 column panel">
+            <h2>{% trans "Make a suggestion" %}</h2>
+
+            <p>{% trans "You are invited to make suggestions or comments on how to improve this document." %}</p>
+
+            <form action="{% url 'suggest' %}" method="post">
+                {% csrf_token %}
+                {{ suggestion_form }}
+
+                <input type="submit" value="{% trans "Make suggestion" %}" class="button radius btn-success">
+            </form>
+
+            <div class="notice">
+                <p><small>Fields marked with * are required.</small></p>
+            </div>
+        </div>
     </div>
 {% endblock %}

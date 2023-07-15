@@ -6,7 +6,7 @@ from django.core.exceptions import ValidationError
 from django.utils.translation import gettext_lazy as _
 
 
-from .models import Signature
+from .models import Signature, Suggestion
 
 
 def validate_duplicate_email(email):
@@ -32,3 +32,15 @@ class PetitionForm(forms.Form):
                            validators=[validate_duplicate_email])
 
 
+class SuggestionForm(forms.Form):
+    suggestion = forms.CharField(label='', 
+                           widget=forms.Textarea(attrs={'placeholder': _('Please type your suggestion here.')}))
+    name = forms.CharField(label='', 
+                           widget=forms.TextInput(attrs={'placeholder': _('Your name *')}), 
+                           max_length=200)
+    job_title = forms.CharField(label='',
+                           widget=forms.TextInput(attrs={'placeholder': _('Your title')}), 
+                           max_length=200, required=False)
+    affiliation = forms.CharField(label='',
+                           widget=forms.TextInput(attrs={'placeholder': _('Your affiliation')}), 
+                           max_length=200, required=False)
