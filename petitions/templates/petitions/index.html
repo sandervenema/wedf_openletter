@@ -242,45 +242,49 @@
             </div>
         </div>
 
-        <div class="small-12 medium-4 column panel">
-            <h2>{% trans "Join the fight for more ethical AI!" %}</h2>
-
-            <p>{% trans "This is version 1 of the perennial task of collecting best practices for AI. If you think this is a good starting place, show your support by adding your signature:" %}</p>
-
-            <p>{% trans "Number of new signatures since launch:" %} <strong>{{ petition.signatures }}</strong></p>
-
-            <form action="{% url 'sign' %}" method="post">
-                {% csrf_token %}
-                {{ form }}
-
-                <input type="submit" value="{% trans "Add!" %}" class="button radius btn-success">
-            </form>
-
-            <div class="notice">
-                <p><small>Fields marked with * are required.</small></p>
+        <div class="small-12 medium-4 column the-forms">
+            <div id="accordion_forms">
+                <h2>Sign the open letter!</h2>
+                
+                <div class="form-panel">
+                    <p>{% trans "This is version 1 of the perennial task of collecting best practices for AI. If you think this is a good starting place, show your support by adding your signature:" %}</p>
+        
+                    <p>{% trans "Number of new signatures since launch:" %} <strong>{{ petition.signatures }}</strong></p>
+        
+                    <form action="{% url 'sign' %}" method="post">
+                        {% csrf_token %}
+                        {{ form }}
+        
+                        <input type="submit" value="{% trans "Add!" %}" class="button radius btn-success">
+                    </form>
+        
+                    <div class="notice">
+                        <p><small>Fields marked with * are required.</small></p>
+            
+                        <p><small>{% blocktrans %}
+                        Your e-mail address will not be stored by the system, and
+                        will only be used to send you an e-mail once, with a
+                        confirmation link to confirm your signature.
+                        {% endblocktrans %}</small></p>
+                    </div>
+                </div>
+        
+                <h2>{% trans "Make a suggestion" %}</h2>
     
-                <p><small>{% blocktrans %}
-                Your e-mail address will not be stored by the system, and
-                will only be used to send you an e-mail once, with a
-                confirmation link to confirm your signature.
-                {% endblocktrans %}</small></p>
-            </div>
-        </div>
-
-        <div class="small-12 medium-4 column panel">
-            <h2>{% trans "Make a suggestion" %}</h2>
-
-            <p>{% trans "You are invited to make suggestions or comments on how to improve this document." %}</p>
-
-            <form action="{% url 'suggest' %}" method="post">
-                {% csrf_token %}
-                {{ suggestion_form }}
-
-                <input type="submit" value="{% trans "Make suggestion" %}" class="button radius btn-success">
-            </form>
-
-            <div class="notice">
-                <p><small>Fields marked with * are required.</small></p>
+                <div class="form-panel">
+                    <p>{% trans "You are invited to make suggestions or comments on how to improve this document." %}</p>
+        
+                    <form action="{% url 'suggest' %}" method="post">
+                        {% csrf_token %}
+                        {{ suggestion_form }}
+        
+                        <input type="submit" value="{% trans "Make suggestion" %}" class="button radius btn-success">
+                    </form>
+        
+                    <div class="notice">
+                        <p><small>Fields marked with * are required.</small></p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
