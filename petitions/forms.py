@@ -46,4 +46,4 @@ class SuggestionForm(forms.Form):
     affiliation = forms.CharField(label='',
                            widget=forms.TextInput(attrs={'placeholder': _('Your affiliation')}), 
                            max_length=200, required=False)
-    hcaptcha = hCaptchaField(label='')
+    hcaptcha = hCaptchaField(label='', size='compact')
