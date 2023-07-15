@@ -100,8 +100,14 @@ p {
 
 li { margin-bottom: 0; }
 
+.signatures .column {
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
 p.signame {
     font-weight: bold;
+    margin-bottom: 10px;
 }
 
 p.signame span.affil {
