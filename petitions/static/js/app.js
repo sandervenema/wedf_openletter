@@ -2,6 +2,7 @@
     $("#accordion").accordion({
         collapsible: true,
         animate: false,
+        active: false,
     });
 
     $("#accordion_forms").accordion({
