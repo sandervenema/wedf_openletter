@@ -21,8 +21,8 @@
 
     // On mobile devices, move the sign box to just below the statement.
     if ($(window).width() <= 640) {
-        var panel = $('.panel');
-        panel.insertBefore('hr:first');
+        var forms = $('.the-forms');
+        forms.insertBefore('.the-letter');
     }
 
 }(jQuery));
