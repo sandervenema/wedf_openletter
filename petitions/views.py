@@ -109,6 +109,9 @@ def sign(request):
 
 # Confirmation
 def confirm(request, link):
+    # Bug in uwsgi: always read request data even if you don't need it, otherwise things get clobbered:
+    _data = request.POST
+
     # Set db sig to active
     s = get_object_or_404(Signature, link=link)
     s.active = True
