@@ -1,11 +1,13 @@
 ;(function ($) {
     $("#accordion").accordion({
-        collapsible: true
+        collapsible: true,
+        animate: false,
     });
 
     $("#accordion_forms").accordion({
         collapsible: true,
         animate: false,
+        active: false,
     });
     
     // Language switcher logic
