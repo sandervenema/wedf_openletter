@@ -32,9 +32,9 @@
             </a><p>
         </div>
     </div>
-
+    
     <div class="row">
-        <div class="small-12 medium-8 column the-letter">
+        <div class="small-12 medium-8 column the-letter">            
             <h1>Me-We-It: A Standard for Responsible AI</h1>
 
             <h2>Overview</h2>
@@ -225,13 +225,16 @@
         </div>
 
         <div class="small-12 medium-4 column the-forms">
+            <div class="num-sigs-box">
+                <div class="num-sigs">{{ petition.signatures }}</div>
+                <div class="num-sigs-label">{% trans "Signatures" %}</div>
+            </div>
+
             <div id="accordion_forms">
                 <h2>Sign the open letter!</h2>
                 
                 <div class="form-panel">
                     <p>{% trans "This is version 1 of the perennial task of collecting best practices for AI. If you think this is a good starting place, show your support by adding your signature:" %}</p>
-        
-                    <p>{% trans "Number of new signatures since launch:" %} <strong>{{ petition.signatures }}</strong></p>
         
                     <form action="{% url 'sign' %}" method="post">
                         {% csrf_token %}

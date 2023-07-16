@@ -87,6 +87,28 @@ h1, h2, h3, h4, h5, h6 {
     color: #333;
 }
 
+.num-sigs-box {
+    font-family: "Karbon", sans-serif;
+    border: 1px solid #d8d8d8;
+    padding: 20px;
+    padding-top: 10px;
+    margin-bottom: 20px;
+}
+
+.num-sigs {
+    font-size: 3em;
+    font-weight: 600;  
+    padding-bottom: 0;
+    margin-bottom: 0;
+    letter-spacing: 1px;
+}
+
+.num-sigs-label {
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: #333;
+}
+
 .ui-accordion .ui-accordion-content {
     padding: 20px;
     height: auto !important;
