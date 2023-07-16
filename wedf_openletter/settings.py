@@ -191,3 +191,7 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, "static/")
 
 DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
+
+LETTER_GH_URL = 'https://raw.githubusercontent.com/WEDFoundation/me-we-it-ai/main/ME_WE_IT.md'
+LETTER_GH_URL_PRETTY = 'https://github.com/WEDFoundation/me-we-it-ai/blob/main/ME_WE_IT.md'
+LETTER_GH_EXPIRES_AFTER = 3600
