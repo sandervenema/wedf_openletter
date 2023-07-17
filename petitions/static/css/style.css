@@ -153,6 +153,17 @@ p {
 
 li { margin-bottom: 0; }
 
+#signatures_box .signatures { display: none; }
+#signatures_box button {
+    color: #2b2b2b;
+    background-color: #f2f2f2;
+    border: 1px solid #d8d8d8;
+    width: 100%;
+}
+#signatures_box #signatures_more {
+    width: 100%;
+}
+
 .signatures .column {
     padding-left: 1em;
     padding-right: 1em;

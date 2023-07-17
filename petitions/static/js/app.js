@@ -16,7 +16,13 @@
         accordion_options['active'] = false;
     }
     $("#accordion_forms").accordion(accordion_options);
-    $("#signatures_box").accordion({ collapsible: true, animate: false, active: false });
+
+    $("#signatures_more").on("click", (event) => {
+        event.preventDefault();
+        $(event.target).hide();
+        $("#signatures_box > .signatures").show();
+        return false;
+    });
     
     // Language switcher logic
     $('ul.languages > li > a').on('click', function click_language(evt) {
