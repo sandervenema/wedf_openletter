@@ -11,11 +11,11 @@
         }
     });
 
-    $("#accordion_forms").accordion({
-        collapsible: true,
-        animate: false,
-        active: false,
-    });
+    var accordion_options = { collapsible: true, animate: false };
+    if ($(window).width() <= 640) {
+        accordion_options['active'] = false;
+    }
+    $("#accordion_forms").accordion(accordion_options);
     
     // Language switcher logic
     $('ul.languages > li > a').on('click', function click_language(evt) {
