@@ -3,6 +3,12 @@
         collapsible: true,
         animate: false,
         active: false,
+        heightStyle: "content",
+        activate: function( event, ui ) {
+            if(!$.isEmptyObject(ui.newHeader.offset())) {
+                $('html:not(:animated), body:not(:animated)').scrollTop(ui.newHeader.offset().top - 10);
+            }
+        }
     });
 
     $("#accordion_forms").accordion({
