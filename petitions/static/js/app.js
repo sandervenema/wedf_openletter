@@ -16,6 +16,7 @@
         accordion_options['active'] = false;
     }
     $("#accordion_forms").accordion(accordion_options);
+    $("#signatures_box").accordion({ collapsible: true, animate: false, active: false });
     
     // Language switcher logic
     $('ul.languages > li > a').on('click', function click_language(evt) {

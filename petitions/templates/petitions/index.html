@@ -51,14 +51,18 @@
                 {% endfor %}
             </div>
 
-            <div class="signatures">
-                {% for sig in signatures %}
+            <div id="signatures_box">
+                <h3>{% trans "Show more signatures..." %}</h3>
+                
+                <div class="signatures">
+                    {% for sig in signatures %}
                     <div class="row">
                         <div class="small-12 column">
                             <p class="signame">{{ sig.name }}<br><span class="affil">{% if sig.job_title %}{{ sig.job_title }} - {% endif %}{{ sig.affiliation }}</span></p>
                         </div>
                     </div>
-                {% endfor %}
+                    {% endfor %}
+                </div>
             </div>
         </div>
 
