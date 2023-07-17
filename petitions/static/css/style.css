@@ -120,6 +120,7 @@ h1 {
 .ui-accordion .ui-accordion-content {
     padding: 20px;
     height: auto !important;
+    margin-bottom: 1.25rem;
 }
 
 .ui-accordion .ui-accordion-header-collapsed {
