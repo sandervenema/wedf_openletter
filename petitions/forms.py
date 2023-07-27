@@ -45,3 +45,7 @@ class SuggestionForm(forms.Form):
     affiliation = forms.CharField(label='',
                            widget=forms.TextInput(attrs={'placeholder': _('Your affiliation')}), 
                            max_length=200, required=False)
+    email = forms.EmailField(label='', 
+                           widget=forms.TextInput(attrs={'placeholder': _('Your e-mail address')}),
+                           required=False,
+                           validators=[EmailValidator])

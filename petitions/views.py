@@ -179,10 +179,11 @@ def suggest(request):
             name = form.cleaned_data['name']
             affil = form.cleaned_data['affiliation']
             job_title = form.cleaned_data['job_title']
+            email = form.cleaned_data['email']
 
             # Add values to db
             s = Suggestion(suggestion=suggestion,
-                    name=name, job_title=job_title, affiliation=affil, petition=petition)
+                    name=name, job_title=job_title, affiliation=affil, email=email, petition=petition)
             s.save()
 
             # Display thank you message

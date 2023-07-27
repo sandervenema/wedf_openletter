@@ -37,9 +37,9 @@ class SignatureAdmin(admin.ModelAdmin):
 
 @admin.register(Suggestion)
 class SuggestionAdmin(admin.ModelAdmin):
-    fields = ('name', 'job_title', 'affiliation', 'petition', 'suggestion', 'timestamp')
-    list_display = ('name', 'job_title', 'affiliation', 'petition', 'suggestion', 'timestamp')
-    search_fields = ['name', 'job_title', 'affiliation', 'suggestion']
+    fields = ('name', 'job_title', 'affiliation', 'email', 'petition', 'suggestion', 'timestamp')
+    list_display = ('name', 'job_title', 'affiliation', 'email', 'petition', 'suggestion', 'timestamp')
+    search_fields = ['name', 'job_title', 'affiliation', 'email', 'suggestion']
 
 
 admin.site.site_title = 'WEDF Open Letter Backend'

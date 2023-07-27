@@ -33,6 +33,7 @@ class Suggestion(models.Model):
     name = models.CharField(max_length=200)
     affiliation = models.CharField(max_length=200, null=True)
     job_title = models.CharField(max_length=200, null=True)
+    email = models.CharField(max_length=254, null=True)
     petition = models.ForeignKey(Petition, models.CASCADE)
     timestamp = models.DateTimeField(default=timezone.now)
 
