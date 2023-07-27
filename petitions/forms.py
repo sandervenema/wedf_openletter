@@ -34,7 +34,7 @@ class PetitionForm(forms.Form):
 
 class SuggestionForm(forms.Form):
     suggestion = forms.CharField(label='', 
-                           widget=forms.Textarea(attrs={'placeholder': _('Please type your suggestion here.')}),
+                           widget=forms.Textarea(attrs={'placeholder': _('Please type your suggestion here.'), 'rows': 7}),
                            max_length=10000)
     name = forms.CharField(label='', 
                            widget=forms.TextInput(attrs={'placeholder': _('Your name *')}), 
