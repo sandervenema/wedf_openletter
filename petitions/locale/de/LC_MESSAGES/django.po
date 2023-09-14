@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: wedf_openletter 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-12 21:35+0200\n"
+"POT-Creation-Date: 2023-09-14 17:01+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: de\n"
@@ -18,31 +18,49 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: forms.py:17
+#: .\forms.py:17
 msgid "You can only submit the petition once!"
 msgstr "Sie können nur einmal unterschreiben!"
 
-#: forms.py:22
-msgid "Your name"
+#: .\forms.py:22 .\forms.py:40
+#, fuzzy
+#| msgid "Your name"
+msgid "Your name *"
 msgstr "Name"
 
-#: forms.py:25
+#: .\forms.py:25 .\forms.py:43
+#, fuzzy
+#| msgid "Your name"
+msgid "Your title"
+msgstr "Name"
+
+#: .\forms.py:28 .\forms.py:46
 msgid "Your affiliation"
 msgstr "Organisation/Titel"
 
-#: forms.py:28
+#: .\forms.py:31
+#, fuzzy
+#| msgid "Your e-mail address"
+msgid "Your e-mail address *"
+msgstr "E-mail Adresse"
+
+#: .\forms.py:37
+msgid "Please type your suggestion here."
+msgstr ""
+
+#: .\forms.py:49
 msgid "Your e-mail address"
 msgstr "E-mail Adresse"
 
-#: templates/404.html:4
+#: .\templates\404.html:4
 msgid "Page not found!"
 msgstr "Seite nicht gefunden!"
 
-#: templates/404.html:11
+#: .\templates\404.html:11
 msgid "The page you were looking for cannot be found."
 msgstr "Seite nicht gefunden!"
 
-#: templates/petitions/confirmation_mail.txt:3
+#: .\templates\petitions\confirmation_mail.txt:3
 #, python-format
 msgid ""
 "\n"
@@ -77,425 +95,104 @@ msgstr ""
 "\n"
 "Das WEDF Team\n"
 
-#: templates/petitions/confirmed.html:4 templates/petitions/thankyou.html:4
-#: templates/petitions/thankyou.html:9
+#: .\templates\petitions\confirmed.html:4
+#: .\templates\petitions\thankyou-suggestion.html:4
+#: .\templates\petitions\thankyou-suggestion.html:9
+#: .\templates\petitions\thankyou.html:4 .\templates\petitions\thankyou.html:9
 msgid "Thank you!"
 msgstr "Danke für Ihre Unterstützung!"
 
-#: templates/petitions/confirmed.html:9
+#: .\templates\petitions\confirmed.html:9
 msgid "Confirmed!"
 msgstr "Sie haben erfolgreich unterschrieben!"
 
-#: templates/petitions/confirmed.html:11
-msgid "Your signature was successfully processed. Thank you for your support."
+#: .\templates\petitions\confirmed.html:11
+#, fuzzy
+#| msgid ""
+#| "Your signature was successfully processed. Thank you for your support."
+msgid "Your signature was successfully added. Thank you for your support."
 msgstr ""
 "Sie haben erfolgreich unterschrieben. Vielen Dank für Ihre Unterstützung."
 
-#: templates/petitions/confirmed.html:25 templates/petitions/thankyou.html:34
-msgid "Back to the petition"
+#: .\templates\petitions\confirmed.html:25
+#: .\templates\petitions\thankyou-suggestion.html:13
+#: .\templates\petitions\thankyou.html:34
+#, fuzzy
+#| msgid "Back to the petition"
+msgid "Back to the open letter"
 msgstr "Zurück zur Petition"
 
-#: templates/petitions/index.html:4
+#: .\templates\petitions\index.html:4
 msgid "Sign the open letter!"
 msgstr "Unterschreiben Sie den offenen Brief!"
 
-#: templates/petitions/index.html:28
-msgid "Capturing Intent"
-msgstr ""
-
-#: templates/petitions/index.html:30
-msgid ""
-"This Open Suggestion is written by the actual builders, collaborators, "
-"users, and stakeholders who have seen the value and damage Artificial "
-"Intelligence (AI) can deliver firsthand. We aim to set a healthy tone for "
-"the industry while making the process understandable by the public to "
-"illuminate the steps that should be taken to build more ethical AI. Now more "
-"than ever, it's necessary to open up the process so we can all have a voice "
-"at the table and hold each other accountable without severely restricting "
-"innovation."
-msgstr ""
-
-#: templates/petitions/index.html:32
-msgid ""
-"AI has transformed the way we connect, learn, live, and work but now we're "
-"seeing many doomerism narratives that are being used to obfuscate the "
-"structures of AI instead of focusing on clear, accountable communication "
-"that enables honest discussion. The creation of AI can be a technically "
-"dense process but the standard systems that people use to teach machines and "
-"the outputs the machines create can be monitored and validated in a simple "
-"framework that enables everyone to have a seat at the table regardless of "
-"your data science background. As policy makers frantically race to catch-up "
-"with regulation and the EU AI Act signals it may add GPAI (General Purpose "
-"AI) to the high risk category, we are here to set an actionable standard "
-"every team can use immediately that also clarifies how AI is built so we can "
-"reduce silos and discuss as a group. Instead of an Open Letter, this is an "
-"Open Suggestion from a group of experienced technologists, data scientists, "
-"researchers, journalists, and people concerned with the impact of AI."
-msgstr ""
-
-#: templates/petitions/index.html:34
-msgid "Intentionality is Imperative"
-msgstr ""
-
-#: templates/petitions/index.html:36
-msgid ""
-"The development of AI has the potential to bring about significant benefits, "
-"including\n"
-"            increased efficiency, improved decision-making, and the ability "
-"to tackle problems that were previously impossible to solve. However, AI "
-"also has the ability to force human moderators to witness horrible content, "
-"disadvantaged the disenfranchised, amplify data privacy and safety concerns, "
-"steal intellectual property not created for the process, and perpetuate "
-"biases that cause harm.  Without careful consideration and planning, we risk "
-"creating AI systems that worsen the very problems we seek to solve."
-msgstr ""
-
-#: templates/petitions/index.html:39
-msgid "Intentional AI - Step Report"
-msgstr ""
-
-#: templates/petitions/index.html:41
-msgid ""
-"These are the first questions and considerations we believe every AI team "
-"and individual builder should take everyday to ensure we are releasing more "
-"ethical AI models. They are intended to be communicated in simple language "
-"without technical jargon to ensure the steps and logic can be understood by "
-"every audience and will be transacted over time to every local human "
-"language where we can find volunteers to support. We will not get it right "
-"as human processes must iterate when working with machines that learn. This "
-"is V1, the first version of questions to check ourselves and will one day be "
-"V29402910 as we refine the list to capture the appropriate steps that should "
-"be taken to clarify and validate our intentions alongside technology that is "
-"constantly evolving."
-msgstr ""
-
-#: templates/petitions/index.html:43
-msgid ""
-"This Open Suggestion will live as a forum, and we welcome new suggestions "
-"and approaches under the important banner of registering intent. The steps "
-"are isolated based on the core elements of building AI (Training, Creating, "
-"Testing) and the actors who engage in the process to help clarify the "
-"importance of silo reduction: Me, We, It."
-msgstr ""
-
-#: templates/petitions/index.html:45
-msgid ""
-"Me - The questions each individual who is working on the AI should ask "
-"themselves before they start and as they work through the process."
-msgstr ""
-
-#: templates/petitions/index.html:47
-msgid ""
-"We - The questions the group should ask themselves and define the diversity "
-"required to reduce as much human bias as possible."
-msgstr ""
-
-#: templates/petitions/index.html:49
-msgid ""
-"It - The questions we should ask individuals and the group as they relate to "
-"the model being created and the impact it can have on our world."
-msgstr ""
-
-#: templates/petitions/index.html:52
-msgid "Step 1. Training Data Selection and Ingestion"
-msgstr ""
-
-#: templates/petitions/index.html:55
-msgid ""
-"Me - The necessary questions to ask myself before starting this part of the "
-"process. Answers should be saved so you can look back at how your thought "
-"process evolves."
-msgstr ""
-
-#: templates/petitions/index.html:58
-msgid ""
-"\n"
-"                        <li>What are the reasons for me selecting this "
-"training data, and how does that selection align with my intention for this "
-"model?</li>\n"
-"                        <li>Do I have experience in using similar data for "
-"AI or Machine Learning models in the past or is this the first time I am "
-"using this data source?</li>\n"
-"                        <li>If I've used this data previously, were there "
-"any issues that resulted from the models that were trained on this data "
-"historically?</li>\n"
-"                        <li>If this is the first time I've used this data, "
-"what are my expectations for the impact this data will have on the models "
-"outputs?</li>\n"
-"                        <li>Have you used a Model Card to communicate risks "
-"and how will this document be updated with the collaboration team?</li>\n"
-"                        <li>What do I hope the data will do to this model, "
-"what is my intention of the outcome and how do I expect the training data "
-"will impact that performance?</li>\n"
-"                        <li>Can I summarise what is in this training data in "
-"a way that captures the essence of the data in a way a non-data scientist "
-"can understand?</li>\n"
-"                        <li>Do I feel rushed or pressured to input data from "
-"questionable sources?</li>\n"
-"                        <li>Can I cite my source of the training data?</li>\n"
-"                        <li>What biases may be acting on my selection of "
-"this data?</li>\n"
-"                        <li>Am I considering biases I have that I don't "
-"understand and am I sharing my logic with a larger group who can help me "
-"identify my bias being deployed when selecting data?</li>\n"
-"                        <li>How do I think this training data will benefit "
-"this model?</li>\n"
-"                        "
-msgstr ""
-
-#: templates/petitions/index.html:74 templates/petitions/index.html:119
-#: templates/petitions/index.html:166
-msgid ""
-"We - The questions we should ask ourselves as a working group before "
-"starting this part of the process. Answers should be saved so we can look "
-"back at how our thought process evolves."
-msgstr ""
-
-#: templates/petitions/index.html:77
-msgid ""
-"\n"
-"                        <li>Who collaborated in the process of building the "
-"training data strategy and selection?</li>\n"
-"                        <li>Is the team of people who are working on "
-"selecting the training data from a diverse set of backgrounds and "
-"experiences to help reduce the bias in the data selection?</li>\n"
-"                        <li>What are the likely biases inherent in this team "
-"that selected the training data?</li>\n"
-"                        <li>Does the whole team understand where the train "
-"data came from, and can they explain it back in their own words?</li>\n"
-"                        <li>Is a Model Card being used to communicate risks "
-"and did each contributor create their own document that can be shared with "
-"the larger team?</li>\n"
-"                        <li>Is there any protected or copyrighted material "
-"in the training data such as Personally Identifiable Information (PII), "
-"Payment Card Industry (PCI) data, and Protected Health Information (PHI), "
-"and have we considered GDPR, CCPA or any other systems for managing data "
-"sources?</li>\n"
-"                        <li>What percentage of my training data am I saving "
-"for testing and how am I selecting it?</li>\n"
-"                        "
-msgstr ""
-
-#: templates/petitions/index.html:88 templates/petitions/index.html:130
-#: templates/petitions/index.html:186
-msgid ""
-"It - The questions we should ask ourselves of the algorithms or models "
-"before starting this part of the process. Answers should be saved so we can "
-"look back at how our thought process evolves."
-msgstr ""
-
-#: templates/petitions/index.html:91
-msgid ""
-"\n"
-"                        <li>Do I have means to compensate should part of "
-"this data set be discovered to be illegal, unreliable, or unacceptable at "
-"some point in the future?</li>\n"
-"                        <li>What data is needed to train thoughtfully and "
-"with intention?</li>\n"
-"                        <li>Is the full data set of known origin, "
-"explainable, and beneficial for the model?</li>\n"
-"                        <li>What are the likely biases inherent in the data?"
-"</li>\n"
-"                        <li>Is there any personal identifiable information, "
-"protected data, or copyrighted material?</li>\n"
-"                        <li>Am I prepared to handle liability for the model "
-"if part of the data set causes any legal issues in the future?</li>\n"
-"                        "
-msgstr ""
-
-#: templates/petitions/index.html:102
-msgid "Step 2. Creation or Selection of Algorithms and Models"
-msgstr ""
-
-#: templates/petitions/index.html:105 templates/petitions/index.html:154
-msgid ""
-"Me - The questions I should ask myself before starting this part of the "
-"process. Answers should be saved so you can look back at how your thought "
-"process evolves."
-msgstr ""
-
-#: templates/petitions/index.html:108
-msgid ""
-"\n"
-"                        <li>What do I intend for this model to do, and why "
-"am I training it?</li>\n"
-"                        <li>If I am running reinforcement learning, how will "
-"this model optimise in the live environment and is it possible my selection "
-"of outcomes to test is biassed?</li>\n"
-"                        <li>If I am deploying transfer learning, what are "
-"the possible biases that the transferring process will uncover?</li>\n"
-"                        <li>If I am running ensemble models or systems that "
-"train each other is there a chance that new bias or bad data collection "
-"practices will enter the system?</li>\n"
-"                        <li>How do I think this model will perform and what "
-"are some examples of desired outputs I am hoping to see?</li>\n"
-"                        <li>What are my human biases that I possess that "
-"impacted my goals and reasoning?</li>\n"
-"                        <li>If I didn't write the model from scratch, where "
-"did it come from and how was it initially trained?</li>\n"
-"                        "
-msgstr ""
-
-#: templates/petitions/index.html:122
-msgid ""
-"\n"
-"                        <li>Who did I collaborate with in the process of "
-"training this model and building the strategy?</li>\n"
-"                        <li>What human biases are in this group, and have we "
-"considered if the working group is diverse enough to capture differing "
-"points of view?</li>\n"
-"                        <li>Who were the collaborators building the model "
-"and strategy?</li>\n"
-"                        <li>Who are the stakeholders and are all the "
-"stakeholders engaging in this step of the process?</li>\n"
-"                        "
-msgstr ""
-
-#: templates/petitions/index.html:133
-msgid ""
-"\n"
-"                        <li>Where did the model come from or was it "
-"developed from scratch?</li>\n"
-"                        <li>What is the intended use of the model once it is "
-"trained?</li>\n"
-"                        <li>What are potential unintended uses/consequences, "
-"including subsequent level outcomes?</li>\n"
-"                        <li>What are the likely biases that could be "
-"amplified through the model?</li>\n"
-"                        <li>Do we have examples of these models with similar "
-"data being deployed previously and what were the intended and unintended "
-"outcomes?</li>\n"
-"                        <li>What are the possible dangers of the model and "
-"do we have a plan for the worst case scenarios?</li>\n"
-"                        <li>What type of measure have I put into place as "
-"precautionary measures?</li>\n"
-"                        <li>Who controls the model?</li>\n"
-"                        <li>How will continued compliance with laws and "
-"regulations be monitored and implemented?</li>\n"
-"                        <li>How will biases be discovered and resolved?</"
-"li>\n"
-"                        <li>How can the model be shut down and under what "
-"circumstances must that happen?</li>\n"
-"                        <li>Are there any self interested stakeholders or "
-"realities of funding that may stop that from happening?</li>\n"
-"                        <li>What are the contractual requirements that have "
-"been entered into that will dictate the management and usage of this model?</"
-"li>\n"
-"                        "
-msgstr ""
-
-#: templates/petitions/index.html:151
-msgid "Step 3. Testing & Tagging"
-msgstr ""
-
-#: templates/petitions/index.html:157
-msgid ""
-"\n"
-"                        <li>Is the data I'm using for testing sufficient for "
-"analysing how the model performs?</li>\n"
-"                        <li>Is user testing in the live environment being "
-"considered and how will the model be adapted if it turns out that the user "
-"behaviour outcome is unwanted.</li>\n"
-"                        <li>What do I think is the best approach for "
-"evaluating the outcome of this model before I speak with the larger group "
-"about our approach?</li>\n"
-"                        <li>Am I confident that the team and I are aware of "
-"the impact our work can have and have we thought about all the potentially "
-"bad outcomes that could result from our work that we should be testing for "
-"before we go live?</li>\n"
-"                        <li>Do I believe we have been thorough in our "
-"testing strategy and deployment to ensure we have unearthed any issues that "
-"could arise from the models outputs?</li>\n"
-"                        "
-msgstr ""
-
-#: templates/petitions/index.html:169
-msgid ""
-"\n"
-"                        <li>How do we evaluate the performance and outcomes "
-"of this model?</li>\n"
-"                        <li>Are we aware of where the testing data come from "
-"and is the testing data appropriate to be representative in relation to the "
-"vastness of the training data?</li>\n"
-"                        <li>If the data is tagged by people, who are the "
-"people, are they being humanely treated?</li>\n"
-"                        <li>What instruction did taggers receive before they "
-"tag the data that might impact their opinion?</li>\n"
-"                        <li>What questions are the taggers or working group "
-"asking of the data?</li>\n"
-"                        <li>Does the tagging strategy align with the "
-"training data and model creation strategy?</li>\n"
-"                        <li>Is there an appropriate amount of diversity on "
-"my data tagging team?</li>\n"
-"                        <li>What human biases might impact the tagging or "
-"testing process?</li>\n"
-"                        <li>Is user testing in the live environment data "
-"being collected and how will it feed back into an iterative process?</li>\n"
-"                        <li>Are the user group a diverse audience that is "
-"representative of the future total user group?</li>\n"
-"                        <li>Is it possible that bias is a programmatic "
-"result of the model?</li>\n"
-"                        <li>Whom did I collaborate with in the process of "
-"building the testing or tagging data strategy?</li>\n"
-"                        <li>Are product teams involved in the process of "
-"retrieving user data and sharing human logic with the larger group?</li>\n"
-"                        "
-msgstr ""
-
-#: templates/petitions/index.html:189
-msgid ""
-"\n"
-"                        <li>Did the results of the test or tagged data match "
-"our intent for the model outputs?</li>\n"
-"                        <li>If we are testing our models to determine "
-"accuracy, how much do the results we are seeing match up with the core "
-"intent of what the model will do?</li>\n"
-"                        <li>Will I now tune the model based on the outputs "
-"of the testing or tagged data? If so, start the process from Step 1.</li>\n"
-"                        <li>If deploying reinforcement learning, how can "
-"model outcomes amplify bias and influence new data from users?</li>\n"
-"                        "
-msgstr ""
-
-#: templates/petitions/index.html:202
+#: .\templates\petitions\index.html:43
 msgid "Signatures:"
 msgstr "Unterschriften"
 
-#: templates/petitions/index.html:224
-msgid "Join the fight for more ethical AI!"
-msgstr "Beteiligen Sie sich am Kampf für eine ethischere KI!"
-
-#: templates/petitions/index.html:226
-msgid ""
-"This is version 1 of the perennial task of collecting best practices for AI. "
-"If you think this is a good starting place, show your support by adding your "
-"signature:"
+#: .\templates\petitions\index.html:55
+msgid "Load more signatures..."
 msgstr ""
-"Dies ist Version 1 der immerwährenden Aufgabe, bewährte Verfahren für KI zu "
-"sammeln. Wenn Sie denken, dass dies ein guter Ausgangspunkt ist, zeigen Sie "
-"Ihre Unterstützung,  indem Sie Ihre Unterschrift hinzufügen:"
 
-#: templates/petitions/index.html:228
-msgid "Number of new signatures since launch:"
-msgstr "Unterschriften:"
+#: .\templates\petitions\index.html:72
+#, fuzzy
+#| msgid "Signatures:"
+msgid "Signatures"
+msgstr "Unterschriften"
 
-#: templates/petitions/index.html:234
+#: .\templates\petitions\index.html:79
+msgid "Show your support by adding your signature:"
+msgstr ""
+
+#: .\templates\petitions\index.html:85
 msgid "Add!"
 msgstr "Unterschreiben!"
 
-#: templates/petitions/index.html:237
+#: .\templates\petitions\index.html:90
+#, fuzzy
+#| msgid ""
+#| "\n"
+#| "            Your e-mail address will not be stored by the system, and\n"
+#| "            will only be used to send you an e-mail once, with a\n"
+#| "            confirmation link to confirm your signature.\n"
+#| "            "
 msgid ""
 "\n"
-"            Your e-mail address will not be stored by the system, and\n"
-"            will only be used to send you an e-mail once, with a\n"
-"            confirmation link to confirm your signature.\n"
-"            "
+"                        Your e-mail address will not be stored by the "
+"system, and\n"
+"                        will only be used to send you an e-mail once, with "
+"a\n"
+"                        confirmation link to confirm your signature.\n"
+"                        "
 msgstr ""
 "\n"
 "Ihre E-mail Adresse wird nicht von uns gespeichert. Wir werden sie "
 "ausschließlich zum Senden eines Bestätigungslinks verwenden."
 
-#: templates/petitions/thankyou.html:12
+#: .\templates\petitions\index.html:98
+msgid "Engage - Talk to the community"
+msgstr ""
+
+#: .\templates\petitions\index.html:101
+msgid ""
+"Here you can ask the AI community any questions you may have about how AI "
+"works. You can also make suggestions, corrections or comments to improve "
+"this document."
+msgstr ""
+
+#: .\templates\petitions\index.html:107
+msgid "Make suggestion"
+msgstr ""
+
+#: .\templates\petitions\index.html:115
+msgid "Collaborate - Iterate on GitHub"
+msgstr ""
+
+#: .\templates\petitions\thankyou-suggestion.html:11
+msgid "Thank you for your suggestion."
+msgstr ""
+
+#: .\templates\petitions\thankyou.html:12
 msgid ""
 "\n"
 "                E-mail failed to send, please confirm your signature by "
@@ -506,25 +203,40 @@ msgstr ""
 "Die E-mail konnte leider nicht gesendet werden. Bitte klicken Sie hier, um "
 "Ihre Unterschrift zu bestätigen:"
 
-#: templates/petitions/thankyou.html:15
+#: .\templates\petitions\thankyou.html:15
 msgid "Confirm"
 msgstr "Bestätigen"
 
-#: templates/petitions/thankyou.html:17
+#: .\templates\petitions\thankyou.html:17
 msgid ""
 "An e-mail with a confirmation link has been sent to your e-mail address to "
 "confirm your signature."
 msgstr "Sie haben eine E-mail mit einem Link zur Bestätigung erhalten."
 
-#: templates/petitions/thankyou.html:19
+#: .\templates\petitions\thankyou.html:19
 msgid "If you don't get a confirmation e-mail, please check your spam folder."
 msgstr ""
 "Sollte Sie keine E-Mail in Ihrem Posteingang erhalten, so überprüfen Sie "
 "bitte Ihren Spam-Ordner. "
 
-#: views.py:69
+#: .\views.py:118
 msgid "WEDF: Confirm your signature"
 msgstr "WEDF: Bestätigen Sie Ihre Unterschrift"
+
+#~ msgid "Join the fight for more ethical AI!"
+#~ msgstr "Beteiligen Sie sich am Kampf für eine ethischere KI!"
+
+#~ msgid ""
+#~ "This is version 1 of the perennial task of collecting best practices for "
+#~ "AI. If you think this is a good starting place, show your support by "
+#~ "adding your signature:"
+#~ msgstr ""
+#~ "Dies ist Version 1 der immerwährenden Aufgabe, bewährte Verfahren für KI "
+#~ "zu sammeln. Wenn Sie denken, dass dies ein guter Ausgangspunkt ist, "
+#~ "zeigen Sie Ihre Unterstützung,  indem Sie Ihre Unterschrift hinzufügen:"
+
+#~ msgid "Number of new signatures since launch:"
+#~ msgstr "Unterschriften:"
 
 #~ msgid "Open Letter to President Trump:"
 #~ msgstr "Offener Brief an Präsident Trump"
