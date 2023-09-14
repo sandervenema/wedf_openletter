@@ -168,7 +168,7 @@ AUTH_PASSWORD_VALIDATORS = [
 LANGUAGE_CODE = 'en-us'
 LANGUAGES = [
     ('en', _("English")),
-    ('kr', _('Korean')),
+    ('ko', _('Korean')),
     ('ar', _('Arabic')),
 #    ('de', _("German")),
 #    ('es', _("Spanish")),
