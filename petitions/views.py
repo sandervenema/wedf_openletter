@@ -78,7 +78,7 @@ def index(request):
             initial=False).order_by('-timestamp')
     form = PetitionForm()
     suggestion_form = SuggestionForm()
-    letter_text = fetch_latest_letter(url=settings.LETTER_GH_URL, language=request.LANGUAGE_CODE)
+    letter_text = fetch_latest_letter(url=settings.LETTER_GH_URL, lang=request.LANGUAGE_CODE)
 
     return render(request, 'petitions/index.html', {
         'letter_text': letter_text,
@@ -141,7 +141,7 @@ def sign(request):
             active_signatures = petition.signature_set.filter(active=True,
                     initial=False).order_by('-timestamp')
             suggestion_form = SuggestionForm()
-            letter_text = fetch_latest_letter(settings.LETTER_GH_URL)
+            letter_text = fetch_latest_letter(settings.LETTER_GH_URL, lang=translation.get_language())
 
             return render(request, 'petitions/index.html', {
                 'letter_text': letter_text,
@@ -197,7 +197,7 @@ def suggest(request):
             active_signatures = petition.signature_set.filter(active=True,
                     initial=False).order_by('-timestamp')
             petition_form = PetitionForm()
-            letter_text = fetch_latest_letter(settings.LETTER_GH_URL)
+            letter_text = fetch_latest_letter(settings.LETTER_GH_URL, lang=translation.get_language())
 
             return render(request, 'petitions/index.html', {
                 'letter_text': letter_text,
