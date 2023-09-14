@@ -25,9 +25,12 @@ logging.basicConfig(format='%(asctime)s %(levelname)s: %(message)s')
 
 # Fetch latest Markdown source of open letter from Github
 # Cache this so we don't hit the server on every request.
-def fetch_latest_letter(url):
+def fetch_latest_letter(url, lang='en'):
     with requests_cache.CachedSession(backend='sqlite', expire_after=settings.LETTER_GH_EXPIRES_AFTER) as session:
-        resp = session.get(settings.LETTER_GH_URL)
+        if lang == 'en':
+            resp = session.get(settings.LETTER_GH_URL)
+        else:
+            resp = session.get(settings.LETTER_GH_URL.replace('.md', '_' + lang + '.md'))
         if resp.status_code != 200:
             md_src = "# Could not retrieve letter\n\nPlease go [here]({}) to see it.".format(
                 settings.LETTER_GH_URL_PRETTY)
@@ -75,7 +78,7 @@ def index(request):
             initial=False).order_by('-timestamp')
     form = PetitionForm()
     suggestion_form = SuggestionForm()
-    letter_text = fetch_latest_letter(settings.LETTER_GH_URL)
+    letter_text = fetch_latest_letter(url=settings.LETTER_GH_URL, language=request.LANGUAGE_CODE)
 
     return render(request, 'petitions/index.html', {
         'letter_text': letter_text,

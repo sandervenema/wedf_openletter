@@ -167,11 +167,13 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 LANGUAGES = [
-    ('de', _("German")),
     ('en', _("English")),
-    ('es', _("Spanish")),
-    ('fr', _("French")),
-    ('sv', _("Swedish")),
+    ('kr', _('Korean')),
+    ('ar', _('Arabic')),
+#    ('de', _("German")),
+#    ('es', _("Spanish")),
+#    ('fr', _("French")),
+#    ('sv', _("Swedish")),
 ]
 LOCALE_PATHS = (BASE_DIR + '/petitions/locale',)
 
