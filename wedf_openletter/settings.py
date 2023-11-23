@@ -170,9 +170,9 @@ LANGUAGES = [
     ('en', _("English")),
     ('ko', _('Korean')),
     ('ar', _('Arabic')),
+    ('fr', _("French")),
 #    ('de', _("German")),
 #    ('es', _("Spanish")),
-#    ('fr', _("French")),
 #    ('sv', _("Swedish")),
 ]
 LOCALE_PATHS = (BASE_DIR + '/petitions/locale',)
