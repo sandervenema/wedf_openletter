@@ -171,6 +171,7 @@ LANGUAGES = [
     ('ko', _('Korean')),
     ('ar', _('Arabic')),
     ('fr', _("French")),
+    ('sw', _("Swahili")),
 #    ('de', _("German")),
 #    ('es', _("Spanish")),
 #    ('sv', _("Swedish")),
